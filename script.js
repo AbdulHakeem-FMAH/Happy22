@@ -5,7 +5,7 @@ const celebrateButton = document.getElementById('celebrate-button');
 // Function to join Google Meet call
 function joinGoogleMeet() {
     // Replace this with your Google Meet link
-    const meetLink = "https://meet.google.com/rki-bbdt-kxp";
+    const meetLink = "https://meet.google.com/btb-cune-oye";
 
     // Open Google Meet link in a new tab
     window.open(meetLink, '_blank');
