@@ -1,0 +1,192 @@
+@font-face{
+    src:url(Font/Pacifico-Regular.ttf);
+    font-family: Pacifico;
+}
+@font-face{
+    src:url(Font/Courgette-Regular.ttf);
+    font-family: Courgette;
+}
+@font-face{
+    src:url(Font/BungeeInline-Regular.ttf);
+    font-family: Bungee;
+}
+@font-face{
+    src:url(Font/KodeMono-VariableFont_wght.ttf);
+    font-family: KodeMono;
+}
+
+/* Base styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url('/Birthday/Pics/bg3.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    background: rgba(255, 174, 166, 0.5);
+    color: rgb(154, 27, 27);
+    /* font-style: italic; */
+    font-family: Arial;
+    font-weight: bolder;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3em;
+    font-family: Bungee;
+}
+
+section {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px;
+    background: rgba(255, 216, 216, 0.5);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+section p{
+    font-family: KodeMono;
+    font-size: 1.25em;
+    font-weight: bold;
+}
+
+h2 {
+    color: #ff6a88;
+    font-size: 2.75em;
+    margin-bottom: 20px;
+    font-family: Courgette;
+}
+
+.photo-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.photo-gallery img {
+    width: calc(33.33% - 10px);
+    max-height: calc((100vw / 3) * 2);
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.photo-box {
+    position: relative;
+    display: inline-block;
+    width: calc(33.33% - 20px);
+    margin: 10px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    background: rgba(255, 216, 216, 0.5);
+    backdrop-filter: blur(10px);
+}
+
+.photo-content {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    width: 100%;
+    padding-top: 167%;
+}
+
+.photo-content img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.photo-content:hover img {
+    transform: scale(1.1);
+}
+
+.message {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 182, 193, 0.9);
+    color: black;
+    /* font-style: italic; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: KodeMono;
+    font-size: 0.83em;
+    font-weight:550;
+}
+
+.photo-box:hover .message {
+    opacity: 1;
+}
+
+.video-container {
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 216, 216, 0.5);
+    backdrop-filter: blur(10px);
+}
+
+video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+button#celebrate-button {
+    margin: 20px;
+    padding: 15px 30px;
+    background-color: rgba(255, 130, 130, 0.7);
+    color: white;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    font-family: KodeMono;
+    font-weight: bolder;
+}
+
+button#celebrate-button:hover {
+    background-color: rgba(255, 106, 136, 0.7);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 600px) {
+    .photo-gallery {
+        flex-direction: column;
+    }
+
+    .photo-gallery img {
+        width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+        margin-bottom: 10px;
+    }
+}
